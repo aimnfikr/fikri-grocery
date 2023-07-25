@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FIKRI Grocery Shop - Cart</title>
+  <link rel="stylesheet" type="text/css" href="my grocery css.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to FIKRI Grocery Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/Asus/OneDrive/Desktop/CSC574Testing/Grocery/my%20grocery%20shop.html">Home</a></li>
+        <li><a href="file:///C:/Users/Asus/OneDrive/Desktop/CSC574Testing/Grocery/grocery%20product.html">Products</a></li>
+        <li><a href="file:///C:/Users/Asus/OneDrive/Desktop/CSC574Testing/Grocery/grocery%20cart.html">Cart</a></li>
+        <li><a href="file:///C:/Users/Asus/OneDrive/Desktop/CSC574Testing/Grocery/grocery%20contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Your Cart</h2>
+    <form id="add-to-cart-form">
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="choose">---PLEASE SELECT---</option>
+        <option value="DIARY">DIARY</option>
+        <option value="MEAT/PROTEIN">MEAT/PROTEIN</option>
+        <option value="PRODUCE">PRODUCE</option>
+        <option value="CANNED & DRIED PRODUCE">CANNED & DRIED PRODUCE</option>
+        <option value="BAKING">BAKING</option>
+        <option value="CONDIMENTS/PRESERVES">CONDIMENTS/PRESERVES</option>
+        <option value="FREEZER">FREEZER</option>
+        <option value="BREAD/PASTA/GRAINS">BREAD/PASTA/GRAINS</option>
+      </select>
+
+      <label for="product">Product:</label>
+      <select id="product" name="product">
+        <!-- Products will be dynamically populated based on the selected category -->
+      </select>
+
+      <button type="button" id="add-to-cart-button">Add to Cart</button>
+    </form>
+
+    <ul id="cart-items">
+      <!-- Display the items added to the cart here -->
+    </ul>
+    <button id="checkout-button">Checkout</button>
+    <div id="total-price">
+      <h2>Total Price:</h2>
+      <p id="total">$0.00</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 FIKRI Grocery Shop. All rights reserved.</p>
+  </footer>
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Global styles */
+body {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c6d0ae;
+  background-image: url('file:///C:/Users/Asus/Downloads/Wallpaper/071b0ffc0144a3d8445999dbb3a7553b.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 130vh;
+}
+
+header {
+  background-color: #302e2e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #ff7f50;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #302e2e;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Specific styles */
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
