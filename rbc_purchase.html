@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Brew Café - Purchase</title>
+    <link rel="icon" href="icon2_rbc.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('img1_rbc.png') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        header {
+            background-color: #6D3E00;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 20px;
+            background: rgba(249, 247, 245, 0.9);
+            margin: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #homepage, #purchase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .purchase-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .purchase-table, .purchase-table th, .purchase-table td {
+            border: 1px solid black;
+        }
+
+        .purchase-panel {
+            /* Add your styles for the purchase panel here */
+            margin: 10px;
+            padding: 10px;
+        }
+
+        input[type="number"] {
+            width: 40px; /* Adjust the width as needed */
+        }
+
+        #site-icon {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+    <script src="rbc_purchase.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="icon2_rbc.png" alt="Roast & Brew Café Icon" id="site-icon">
+        <h1>Roast & Brew Café</h1>
+        <nav>
+            <a href="rbc_homepage.html">Home</a> |
+            <a href="rbc_menu.html">Menu</a> |
+            <a href="rbc_purchase.html">Purchase</a> |
+            <a href="rbc_about_us.html">About Us</a> |
+            <a href="rbc_contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="purchase" class="center-content">
+        <h2>Café Purchase</h2>
+        <table class="purchase-table">
+            <tr>
+                <!-- Coffee Purchase -->
+                <td>
+                    <div class="purchase-panel" id="coffee">
+                        <h3>Coffee</h3>
+                        <label for="espresso-quantity">Espresso Quantity:</label>
+                        <input type="number" id="espresso-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="espresso-total">0</span></p>
+
+                        <!-- Additional Coffee Items -->
+                        <label for="cappuccino-quantity">Cappuccino Quantity:</label>
+                        <input type="number" id="cappuccino-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="cappuccino-total">0</span></p>
+
+                        <label for="latte-quantity">Latte Quantity:</label>
+                        <input type="number" id="latte-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="latte-total">0</span></p>
+                    </div>
+                </td>
+
+                <!-- Tea Purchase -->
+                <td>
+                    <div class="purchase-panel" id="tea">
+                        <h3>Tea</h3>
+                        <label for="green-tea-quantity">Green Tea Quantity:</label>
+                        <input type="number" id="green-tea-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="green-tea-total">0</span></p>
+
+                        <!-- Additional Tea Items -->
+                        <label for="milk-tea-quantity">Milk Tea Quantity:</label>
+                        <input type="number" id="milk-tea-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="milk-tea-total">0</span></p>
+
+                        <label for="original-tea-quantity">Original Tea Quantity:</label>
+                        <input type="number" id="original-tea-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="original-tea-total">0</span></p>
+                    </div>
+                </td>
+
+                <!-- Pastry Purchase -->
+                <td>
+                    <div class="purchase-panel" id="pastry">
+                        <h3>Pastry</h3>
+                        <label for="cheese-cake-quantity">Cheese Cake Quantity:</label>
+                        <input type="number" id="cheese-cake-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="cheese-cake-total">0</span></p>
+
+                        <!-- Additional Pastry Items -->
+                        <label for="red-velvet-cake-quantity">Red Velvet Cake Quantity:</label>
+                        <input type="number" id="red-velvet-cake-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="red-velvet-cake-total">0</span></p>
+
+                        <label for="chocolate-cake-quantity">Chocolate Cake Quantity:</label>
+                        <input type="number" id="chocolate-cake-quantity" value="0" min="0">
+                        <p>Total Price: $<span id="chocolate-cake-total">0</span></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Display Grand Total -->
+        <p id="grand-total">Grand Total: $0</p>
+
+        <button id="calculate-button">Calculate Total</button>
+        <button id="reset-button">Reset</button>
+
+        <!-- Add other sections as needed -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Roast & Brew Café. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
